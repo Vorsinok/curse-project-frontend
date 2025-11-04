@@ -1,0 +1,121 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "delete": "Delete",
+    "or": "or"
+  },
+  "navbar": {
+    "home": "Home",
+    "myInventories": "My Inventories",
+    "adminPanel": "Admin Panel",
+    "logout": "Logout",
+    "login": "Login"
+  },
+  "toolbar": {
+    "add": "Add",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "username": "Username",
+    "noAccount": "No account?",
+    "haveAccount": "Already have an account?",
+    "login": {
+      "title": "Login",
+      "button": "Sign in"
+    },
+    "register": {
+      "title": "Register",
+      "button": "Sign up"
+    }
+  },
+  "admin": {
+    "title": "User Management",
+    "table": {
+      "username": "Username",
+      "email": "Email",
+      "role": "Role",
+      "status": "Status"
+    },
+    "roles": {
+      "user": "User",
+      "admin": "Admin"
+    },
+    "status": {
+      "active": "Active",
+      "blocked": "Blocked"
+    }
+  },
+  "inventory": {
+    "myInventories": "My Inventories",
+    "noResults":"No result",
+    "search":"Search",
+    "errors": {
+      "load": "Failed to load inventories",
+      "create": "Failed to create inventory",
+      "delete": "Failed to delete inventory",
+      "loadOne": "Failed to load inventory"
+    },
+    "confirm": {
+      "delete": "Delete inventory '{{title}}'?"
+    },
+    "fields": {
+      "name": "Title",
+      "description": "Description"
+    },
+    "buttons": {
+      "create": "Create"
+    },
+    "empty": "No inventories",
+    "table": {
+      "name": "Name",
+      "description": "Description",
+      "date": "Created at",
+      "open": "Open"
+    },
+    "tabs": {
+      "items": "Items",
+      "access": "Access",
+      "settings": "Settings"
+    },
+    "title": "Inventory"
+  },
+  "access": {
+    "title": "Users with access",
+    "placeholder": "Select a user...",
+    "add": "Add",
+    "remove": "Remove",
+    "empty": "No users with access",
+    "errors": {
+      "loadUsers": "Failed to load users",
+      "loadAccess": "Failed to load access list",
+      "add": "Failed to add user",
+      "remove": "Failed to remove user"
+    }
+  },
+  "settings": {
+    "title": "Inventory settings",
+    "name": "Title",
+    "description": "Description",
+    "save": "Save",
+    "saved": "Changes saved successfully!",
+    "error": "Failed to save changes",
+    "cancel":"Cancel"
+  },
+  "items": {
+    "empty": "No items yet",
+    "confirmDelete": "Delete this item?",
+    "form": {
+      "title": "Add Item",
+      "name": "Name",
+      "quantity": "Quantity",
+      "description": "Description",
+      "add": "Add",
+      "errors": {
+        "name": "Enter the item name"
+      }
+    }
+  }
+}
