@@ -58,7 +58,7 @@ export default function ItemTab({ inventoryId }) {
   };
 
   const handleUpdate = async (itemId, oldName) => {
-    const newName = prompt(t("toolbar.edit"), oldName);
+    const newName = toast.success(`${t("toolbar.edit")}: ${oldName}`);
     if (!newName || newName === oldName) return;
     try {
       await apiUpdateItem(inventoryId, itemId, { name: newName, inventoryId });

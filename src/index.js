@@ -15,7 +15,7 @@ root.render(
       <ThemeProvider>
         <LanguageProvider>
           <AuthProvider>
-            <Toaster position="top-right" />
+            <Toaster position="top-right" reverseOrder={false}/>
             <App />
           </AuthProvider>
         </LanguageProvider>
