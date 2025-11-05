@@ -31,7 +31,7 @@ export default function ItemTab({ inventoryId }) {
   }, [inventoryId]);
 
   const handleAdd = async () => {
-    if (!name.trim()) return alert(t("items.form.errors.name"));
+    if (!name.trim()) return toast.error(t("items.form.errors.name"));
     try {
       await apiCreateItem(inventoryId, {
         name,
@@ -42,7 +42,7 @@ export default function ItemTab({ inventoryId }) {
       setDescription("");
       await loadItems();
     } catch {
-      alert(t("access.errors.add"));
+      toast.error(t("access.errors.add"));
     }
   };
 
@@ -52,7 +52,7 @@ export default function ItemTab({ inventoryId }) {
       await apiDeleteItem(inventoryId, itemId);
       await loadItems();
     } catch {
-      alert(t("access.errors.remove"));
+      toast.error(t("access.errors.remove"));
     }
   };
 
@@ -63,7 +63,7 @@ export default function ItemTab({ inventoryId }) {
       await apiUpdateItem(inventoryId, itemId, { name: newName, inventoryId });
       await loadItems();
     } catch {
-      alert(t("settings.error"));
+      toast.error(t("settings.error"));
     }
   };
 

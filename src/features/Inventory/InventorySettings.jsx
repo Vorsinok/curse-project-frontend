@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { apiGetInventory, apiUpdateInventory } from "../../api/inventoryApi";
 import { useTranslation } from "react-i18next";
+import toast from "react-hot-toast";
 
 export default function InventorySettings({ inventoryId }) {
   const [inventory, setInventory] = useState(null);
@@ -21,9 +22,9 @@ export default function InventorySettings({ inventoryId }) {
   const handleSave = async () => {
     try {
       await apiUpdateInventory(inventoryId, { title, description });
-      alert(t("settings.saved"));
+      toast.success(t("settings.saved"));
     } catch {
-      alert(t("settings.error"));
+      toast.success(t("settings.error"));
     }
   };
 

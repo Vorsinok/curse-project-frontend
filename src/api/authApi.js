@@ -10,6 +10,6 @@ export const apiProfile = () =>
   api.get("/auth/profile").then((r) => r.data);
 
 export const oauthUrl = (provider) => {
-  const origin = process.env.REACT_APP_BACKEND_ORIGIN || "http://localhost:3001";
+  const origin = process.env.REACT_APP_BACKEND_ORIGIN;
   return `${origin}/api/auth/${provider}`;
 };

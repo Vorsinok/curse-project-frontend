@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "http://localhost:3001/api",
+  baseURL: process.env.REACT_APP_API_URL ,
   withCredentials: true,
 });
 
@@ -12,15 +12,15 @@ api.interceptors.request.use((config) => {
 });
 
 api.interceptors.response.use(
-  (r) => r,
-  (err) => {
-    if (err?.response?.status === 401) {
+  (response) => response,
+  (error) => {
+    if (error?.response?.status === 401) {
       localStorage.removeItem("token");
       if (window.location.pathname !== "/login") {
         window.location.href = "/login";
       }
     }
-    return Promise.reject(err);
+    return Promise.reject(error);
   }
 );
 

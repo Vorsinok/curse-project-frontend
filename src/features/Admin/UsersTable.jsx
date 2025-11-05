@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { apiUsers, apiSetRole, apiSetBlocked } from "../../api/userApi";
 import { useTranslation } from "react-i18next";
 

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Select, { components } from "react-select";
+import toast from "react-hot-toast";
 import {
   apiListEditors,
   apiAddEditor,
@@ -40,7 +41,7 @@ export default function AccessTab({ inventoryId }) {
       ]);
       setSelectedUser(null);
     } catch {
-      alert(t("access.errors.add"));
+      toast.error(t("access.errors.add"));
     }
   };
 
@@ -49,7 +50,7 @@ export default function AccessTab({ inventoryId }) {
       await apiRemoveEditor(inventoryId, userId);
       setAccessList((prev) => prev.filter((a) => a.userId !== userId));
     } catch {
-      alert(t("access.errors.remove"));
+      toast.error(t("access.errors.remove"));
     }
   };
 

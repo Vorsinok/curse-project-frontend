@@ -1,4 +1,4 @@
-export function InventoriesTable({ inventories, selectedIds, setSelectedIds, search, setSearch, t }) {
+export function InventoriesTable({ inventories, selectedIds, setSelectedIds, search, t }) {
   const filtered = inventories.filter((inv) => {
     const query = search.toLowerCase();
     return (
