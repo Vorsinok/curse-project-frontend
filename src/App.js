@@ -9,6 +9,7 @@ import InventoryPage from "./features/Inventory/InventoryPage";
 import AdminPage from "./features/Admin/AdminPage";
 import { useAuth } from "./context/AuthContext";
 
+
 export default function App() {
   const { user } = useAuth();
 

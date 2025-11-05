@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 import App from "./App";
 import { AuthProvider } from "./context/AuthContext";
 import { LanguageProvider } from "./context/LanguageContext";
@@ -14,6 +15,7 @@ root.render(
       <ThemeProvider>
         <LanguageProvider>
           <AuthProvider>
+            <Toaster position="top-right" />
             <App />
           </AuthProvider>
         </LanguageProvider>
